@@ -1,0 +1,29 @@
+﻿FUNCTION "URL_Build" : String
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      baseUrl : String;
+      location : String;
+      key : String;
+   END_VAR
+
+   VAR_TEMP 
+      url : String;
+   END_VAR
+
+   VAR CONSTANT 
+      tmpStr1 : String := '&appid=';
+      tmpStr2 : String := '&units=metric';
+   END_VAR
+
+
+BEGIN
+	// Combine strings to form URL
+	#url := CONCAT(IN1 := #baseUrl, IN2 := #location);
+	#url := CONCAT(IN1 := #url, IN2 := #tmpStr1);
+	#url := CONCAT(IN1 := #url, IN2 := #key);
+	#url := CONCAT(IN1 := #url, IN2 := #tmpStr2);
+	
+	#URL_Build := #url;
+END_FUNCTION
+
