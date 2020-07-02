@@ -11,7 +11,7 @@ VERSION : 0.1
 
 
 BEGIN
-	// Convert Kelvin to Celsius
+	// Convert Kelvin to Celsius - V2.1
 	#To_Celsius := #val_K - #KELVIN;
 END_FUNCTION
 
