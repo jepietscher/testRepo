@@ -18,7 +18,7 @@ VERSION : 0.1
 
 
 BEGIN
-	// Combine strings to form URL
+	// Combine strings to form URL - version 2.0
 	#url := CONCAT(IN1 := #baseUrl, IN2 := #location);
 	#url := CONCAT(IN1 := #url, IN2 := #tmpStr1);
 	#url := CONCAT(IN1 := #url, IN2 := #key);
