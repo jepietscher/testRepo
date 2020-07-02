@@ -1,0 +1,17 @@
+﻿FUNCTION "To_Celsius" : Real
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      val_K : Real;
+   END_VAR
+
+   VAR CONSTANT 
+      KELVIN : Real := 273.15;
+   END_VAR
+
+
+BEGIN
+	// Convert Kelvin to Celsius
+	#To_Celsius := #val_K - #KELVIN;
+END_FUNCTION
+
